@@ -1,0 +1,78 @@
+weather_data = {
+    "hyderabad": {
+        "temperature": 30.5,
+        "condition": "Sunny",
+        "humidity": 55,
+        "wind_speed": 12.5
+    },
+    "mumbai": {
+        "temperature": 28.0,
+        "condition": "Cloudy",
+        "humidity": 70,
+        "wind_speed": 15.2
+    },
+    "delhi": {
+        "temperature": 25.5,
+        "condition": "Clear",
+        "humidity": 45,
+        "wind_speed": 10.8
+    },
+    "chennai": {
+        "temperature": 32.0,
+        "condition": "Sunny",
+        "humidity": 65,
+        "wind_speed": 18.3
+    },
+    "bangalore": {
+        "temperature": 24.5,
+        "condition": "Rainy",
+        "humidity": 80,
+        "wind_speed": 9.5
+    }
+}
+def display_weather(city):
+    city = city.lower()
+    if city in weather_data:
+        weather = weather_data[city]
+        print("\n=====================================")
+        print("          WEATHER DETAILS")
+        print("=====================================")
+        print("City        :", city.title())
+        print("Temperature :", weather["temperature"], "°C")
+        print("Condition   :", weather["condition"])
+        print("Humidity    :", str(weather["humidity"]) + "%")
+        print("Wind Speed  :", weather["wind_speed"], "km/h")
+        print("=====================================")
+    else:
+        print("\nWeather information not found for", city.title())
+print("=====================================")
+print("             WEATHER APP")
+print("=====================================")
+print("\nAvailable Cities:")
+print("1. Hyderabad")
+print("2. Mumbai")
+print("3. Delhi")
+print("4. Chennai")
+print("5. Bangalore")
+city = input("\nEnter city name: ")
+display_weather(city)
+output:
+=====================================
+             WEATHER APP
+=====================================
+Available Cities:
+1. Hyderabad
+2. Mumbai
+3. Delhi
+4. Chennai
+5. Bangalore
+Enter city name: Hyderabad
+=====================================
+          WEATHER DETAILS
+=====================================
+City        : Hyderabad
+Temperature : 30.5 °C
+Condition   : Sunny
+Humidity    : 55%
+Wind Speed  : 12.5 km/h
+=====================================
